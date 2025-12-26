@@ -3,6 +3,9 @@ import ContactForm from "@/components/contact-form";
 import Section from "@/components/section";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
+import fortinetLogo from "@/assets/images/Fortinet - Logo.jpg";
+import nutanixLogo from "@/assets/images/Nutanix.png";
+import Image from "next/image";
 import {
   ArrowRight,
   Brain,
@@ -15,6 +18,11 @@ import {
 } from "lucide-react";
 
 export default function Home() {
+  const partners = [
+    { name: "Fortinet", logo: fortinetLogo },
+    { name: "Nutanix", logo: nutanixLogo },
+  ];
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <AmbientBackground />
@@ -366,6 +374,32 @@ export default function Home() {
             </div>
             <div className="lg:col-span-7">
               <ContactForm />
+            </div>
+          </div>
+        </Section>
+
+        <Section
+          eyebrow="Parceiros"
+          title="Tecnologia validada em campo"
+          subtitle="Trabalhamos com parceiros líderes para entregar segurança e performance."
+        >
+          <div className="relative overflow-hidden rounded-3xl border border-card-border bg-card py-8 backdrop-blur">
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-background to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-background to-transparent" />
+            <div className="partners-marquee flex w-max items-center gap-10 px-10">
+              {[...partners, ...partners].map(({ name, logo }, index) => (
+                <div
+                  key={`${name}-${index}`}
+                  className="flex h-20 w-56 items-center justify-center rounded-2xl border border-card-border bg-black/25 px-6"
+                >
+                  <Image
+                    src={logo}
+                    alt={name}
+                    className="h-10 w-auto object-contain opacity-90 grayscale transition hover:opacity-100 hover:grayscale-0"
+                    draggable={false}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </Section>
