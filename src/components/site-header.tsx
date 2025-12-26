@@ -53,19 +53,19 @@ export default function SiteHeader() {
               {item.label}
             </a>
           ))}
-          <Link
-            href="/login"
-            onClick={() => setOpen(false)}
-            className="uppercase tracking-wide hover:text-foreground"
-          >
-            Logar
-          </Link>
           <a
             href="#contato"
             className="inline-flex h-10 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-black transition hover:opacity-90"
           >
             Falar com especialista
           </a>
+          <Link
+            href="/login"
+            onClick={() => setOpen(false)}
+            className="inline-flex h-10 items-center justify-center rounded-full border border-card-border bg-card px-5 text-sm font-semibold text-foreground backdrop-blur transition hover:bg-white/10"
+          >
+            LOGAR
+          </Link>
         </nav>
 
         <button
@@ -100,13 +100,6 @@ export default function SiteHeader() {
                       <span className="uppercase tracking-wide">{item.label}</span>
                     </a>
                   ))}
-                  <Link
-                    href="/login"
-                    onClick={() => setOpen(false)}
-                    className="rounded-2xl border border-card-border bg-card px-4 py-3 text-sm font-semibold text-foreground backdrop-blur"
-                  >
-                    <span className="uppercase tracking-wide">Logar</span>
-                  </Link>
                   <a
                     href="#contato"
                     onClick={() => setOpen(false)}
@@ -114,6 +107,13 @@ export default function SiteHeader() {
                   >
                     Falar com especialista
                   </a>
+                  <Link
+                    href="/login"
+                    onClick={() => setOpen(false)}
+                    className="inline-flex h-11 items-center justify-center rounded-full border border-card-border bg-card px-6 text-sm font-semibold text-foreground backdrop-blur transition hover:bg-white/10"
+                  >
+                    LOGAR
+                  </Link>
                 </div>
               </div>
             </div>
