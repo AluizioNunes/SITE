@@ -1,4 +1,5 @@
 import Logo from "@/components/logo";
+import Link from "next/link";
 
 export default function SiteFooter() {
   return (
@@ -26,9 +27,17 @@ export default function SiteFooter() {
         </div>
         <div className="mt-8 flex flex-col gap-3 border-t border-card-border pt-6 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} ITFACT - IT SOLUTIONS. Todos os direitos reservados.</p>
-          <p className="text-muted">
-            DevSecOps • IA • Plataforma • Observabilidade
-          </p>
+          <div className="flex flex-wrap items-center gap-3">
+            <p className="text-muted">DevSecOps • IA • Plataforma • Observabilidade</p>
+            <span className="text-muted">•</span>
+            <Link href="/politica-de-privacidade" className="hover:text-foreground">
+              Política de Privacidade
+            </Link>
+            <span className="text-muted">•</span>
+            <Link href="/termos-de-servico" className="hover:text-foreground">
+              Termos de Serviço
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
