@@ -74,7 +74,7 @@ export default function ContactForm() {
             name="name"
             required
             autoComplete="name"
-            className="h-11 rounded-2xl border border-card-border bg-black/30 px-4 text-sm text-foreground outline-none ring-0 placeholder:text-muted focus:border-white/30"
+            className="h-11 rounded-2xl border border-card-border bg-black/5 px-4 text-sm text-foreground outline-none ring-0 placeholder:text-muted focus:border-black/20 dark:bg-black/30 dark:focus:border-white/30"
             placeholder="Seu nome"
           />
         </label>
@@ -85,7 +85,7 @@ export default function ContactForm() {
             required
             type="email"
             autoComplete="email"
-            className="h-11 rounded-2xl border border-card-border bg-black/30 px-4 text-sm text-foreground outline-none ring-0 placeholder:text-muted focus:border-white/30"
+            className="h-11 rounded-2xl border border-card-border bg-black/5 px-4 text-sm text-foreground outline-none ring-0 placeholder:text-muted focus:border-black/20 dark:bg-black/30 dark:focus:border-white/30"
             placeholder="voce@empresa.com"
           />
         </label>
@@ -95,7 +95,7 @@ export default function ContactForm() {
         <span className="font-semibold">Empresa</span>
         <input
           name="company"
-          className="h-11 rounded-2xl border border-card-border bg-black/30 px-4 text-sm text-foreground outline-none ring-0 placeholder:text-muted focus:border-white/30"
+          className="h-11 rounded-2xl border border-card-border bg-black/5 px-4 text-sm text-foreground outline-none ring-0 placeholder:text-muted focus:border-black/20 dark:bg-black/30 dark:focus:border-white/30"
           placeholder="Nome da empresa"
         />
       </label>
@@ -106,7 +106,7 @@ export default function ContactForm() {
           name="message"
           required
           rows={5}
-          className="min-h-[132px] resize-none rounded-2xl border border-card-border bg-black/30 px-4 py-3 text-sm text-foreground outline-none ring-0 placeholder:text-muted focus:border-white/30"
+          className="min-h-[132px] resize-none rounded-2xl border border-card-border bg-black/5 px-4 py-3 text-sm text-foreground outline-none ring-0 placeholder:text-muted focus:border-black/20 dark:bg-black/30 dark:focus:border-white/30"
           placeholder="Conte seu objetivo (DevSecOps, IA, pipelines, plataforma, observabilidade...)"
         />
       </label>
@@ -120,7 +120,7 @@ export default function ContactForm() {
           type="submit"
           disabled={isBusy || isSuccess}
           aria-describedby={`${formId}-status`}
-          className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-white px-6 text-sm font-semibold text-black transition disabled:opacity-60"
+          className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-foreground px-6 text-sm font-semibold text-background transition disabled:opacity-60"
         >
           {isBusy ? (
             <Loader2 className="h-4 w-4 animate-spin" />
@@ -141,7 +141,7 @@ export default function ContactForm() {
             Mensagem enviada. Em breve entramos em contato.
           </p>
         )}
-        {state === "error" && <p className="text-red-300">{error}</p>}
+        {state === "error" && <p className="text-red-600 dark:text-red-300">{error}</p>}
       </div>
     </form>
   );

@@ -33,7 +33,7 @@ export default function LoginPage() {
                 name="email"
                 autoComplete="email"
                 required
-                className="h-11 rounded-2xl border border-card-border bg-background px-4 text-foreground outline-none ring-0 focus:border-white/40"
+                className="h-11 rounded-2xl border border-card-border bg-background px-4 text-foreground outline-none ring-0 focus:border-black/20 dark:focus:border-white/40"
               />
             </label>
 
@@ -44,20 +44,20 @@ export default function LoginPage() {
                 name="password"
                 autoComplete="current-password"
                 required
-                className="h-11 rounded-2xl border border-card-border bg-background px-4 text-foreground outline-none ring-0 focus:border-white/40"
+                className="h-11 rounded-2xl border border-card-border bg-background px-4 text-foreground outline-none ring-0 focus:border-black/20 dark:focus:border-white/40"
               />
             </label>
 
             <button
               type="submit"
-              className="mt-2 inline-flex h-11 items-center justify-center rounded-full bg-white px-6 text-sm font-semibold text-black transition hover:opacity-90"
+              className="mt-2 inline-flex h-11 items-center justify-center rounded-full bg-foreground px-6 text-sm font-semibold text-background transition hover:opacity-90"
             >
               Entrar
             </button>
           </form>
 
           {status === "submitted" && (
-            <div className="mt-5 rounded-2xl border border-card-border bg-black/25 p-4 text-sm text-muted">
+            <div className="mt-5 rounded-2xl border border-card-border bg-black/5 p-4 text-sm text-muted dark:bg-black/25">
               Login ainda não está configurado. Esta tela já está pronta para
               integrar autenticação quando você definir a regra de acesso.
             </div>

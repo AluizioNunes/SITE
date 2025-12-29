@@ -1,6 +1,7 @@
 "use client";
 
 import Logo from "@/components/logo";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
@@ -55,17 +56,18 @@ export default function SiteHeader() {
           ))}
           <a
             href="#contato"
-            className="inline-flex h-10 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-black transition hover:opacity-90"
+            className="inline-flex h-10 items-center justify-center rounded-full bg-foreground px-5 text-sm font-semibold text-background transition hover:opacity-90"
           >
             Falar com especialista
           </a>
           <Link
             href="/login"
             onClick={() => setOpen(false)}
-            className="inline-flex h-10 items-center justify-center rounded-full border border-card-border bg-card px-5 text-sm font-semibold text-foreground backdrop-blur transition hover:bg-white/10"
+            className="inline-flex h-10 items-center justify-center rounded-full border border-card-border bg-card px-5 text-sm font-semibold text-foreground backdrop-blur transition hover:bg-black/5 dark:hover:bg-white/10"
           >
             LOGAR
           </Link>
+          <ThemeToggle />
         </nav>
 
         <button
@@ -103,17 +105,20 @@ export default function SiteHeader() {
                   <a
                     href="#contato"
                     onClick={() => setOpen(false)}
-                    className="mt-2 inline-flex h-11 items-center justify-center rounded-full bg-white px-6 text-sm font-semibold text-black"
+                    className="mt-2 inline-flex h-11 items-center justify-center rounded-full bg-foreground px-6 text-sm font-semibold text-background"
                   >
                     Falar com especialista
                   </a>
-                  <Link
-                    href="/login"
-                    onClick={() => setOpen(false)}
-                    className="inline-flex h-11 items-center justify-center rounded-full border border-card-border bg-card px-6 text-sm font-semibold text-foreground backdrop-blur transition hover:bg-white/10"
-                  >
-                    LOGAR
-                  </Link>
+                  <div className="flex items-center gap-3">
+                    <Link
+                      href="/login"
+                      onClick={() => setOpen(false)}
+                      className="flex-1 inline-flex h-11 items-center justify-center rounded-full border border-card-border bg-card px-6 text-sm font-semibold text-foreground backdrop-blur transition hover:bg-black/5 dark:hover:bg-white/10"
+                    >
+                      LOGAR
+                    </Link>
+                    <ThemeToggle />
+                  </div>
                 </div>
               </div>
             </div>

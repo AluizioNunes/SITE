@@ -52,13 +52,13 @@ export default function Home() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href="#contato"
-                className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-white px-6 text-sm font-semibold text-black transition hover:opacity-90"
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-foreground px-6 text-sm font-semibold text-background transition hover:opacity-90"
               >
                 Falar com especialista <ArrowRight className="h-4 w-4" />
               </a>
               <a
                 href="#servicos"
-                className="inline-flex h-12 items-center justify-center rounded-full border border-card-border bg-card px-6 text-sm font-semibold text-foreground backdrop-blur transition hover:bg-white/10"
+                className="inline-flex h-12 items-center justify-center rounded-full border border-card-border bg-card px-6 text-sm font-semibold text-foreground backdrop-blur transition hover:bg-black/5 dark:hover:bg-white/10"
               >
                 Ver serviços
               </a>
@@ -118,7 +118,7 @@ export default function Home() {
                       key={title}
                       className="flex gap-3 rounded-2xl border border-card-border bg-black/25 p-4"
                     >
-                      <div className="mt-0.5 flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10">
+                      <div className="mt-0.5 flex h-10 w-10 items-center justify-center rounded-2xl bg-black/5 dark:bg-white/10">
                         <Icon className="h-5 w-5 text-brand-2" />
                       </div>
                       <div className="min-w-0">
@@ -139,7 +139,7 @@ export default function Home() {
                       Pipeline com segurança integrada e observabilidade.
                     </p>
                   </div>
-                  <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-black/5 dark:bg-white/10">
                     <ShieldCheck className="h-5 w-5 text-brand" />
                   </div>
                 </div>
@@ -191,10 +191,10 @@ export default function Home() {
             ].map(({ icon: Icon, title, desc }) => (
               <div
                 key={title}
-                className="group rounded-3xl border border-card-border bg-card p-6 backdrop-blur transition hover:bg-white/10"
+                className="group rounded-3xl border border-card-border bg-card p-6 backdrop-blur transition hover:bg-black/5 dark:hover:bg-white/10"
               >
                 <div className="flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-black/5 dark:bg-white/10">
                     <Icon className="h-6 w-6 text-brand" />
                   </div>
                   <p className="text-base font-semibold">{title}</p>
@@ -213,7 +213,7 @@ export default function Home() {
         >
           <div className="grid gap-4 lg:grid-cols-12">
             <div className="rounded-3xl border border-card-border bg-card p-7 backdrop-blur lg:col-span-7">
-              <p className="text-sm font-semibold text-white">
+              <p className="text-sm font-semibold text-foreground">
                 Plataforma como produto
               </p>
               <p className="mt-3 text-sm leading-6 text-muted">
@@ -232,7 +232,7 @@ export default function Home() {
                 ].map((item) => (
                   <div
                     key={item}
-                    className="rounded-2xl border border-card-border bg-black/25 px-4 py-3 text-sm text-muted"
+                    className="rounded-2xl border border-card-border bg-black/5 px-4 py-3 text-sm text-muted dark:bg-black/25"
                   >
                     {item}
                   </div>
@@ -363,14 +363,14 @@ export default function Home() {
                 ].map((item) => (
                   <div
                     key={item}
-                    className="rounded-2xl border border-card-border bg-black/25 px-4 py-3 text-sm text-muted"
+                    className="rounded-2xl border border-card-border bg-black/5 px-4 py-3 text-sm text-muted dark:bg-black/25"
                   >
                     {item}
                   </div>
                 ))}
               </div>
               <a
-                className="mt-7 inline-flex h-11 w-full items-center justify-center rounded-full border border-card-border bg-black/30 px-6 text-sm font-semibold text-foreground transition hover:bg-white/10"
+                className="mt-7 inline-flex h-11 w-full items-center justify-center rounded-full border border-card-border bg-black/5 px-6 text-sm font-semibold text-foreground transition hover:bg-black/5 dark:bg-black/30 dark:hover:bg-white/10"
                 href="mailto:contatos@itfact.com?subject=Contato%20-%20ITFACT"
               >
                 contatos@itfact.com

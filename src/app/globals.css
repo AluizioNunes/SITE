@@ -1,6 +1,18 @@
 @import "tailwindcss";
 
 :root {
+  /* Light Mode Defaults */
+  --background: #ffffff;
+  --foreground: #09090b;
+  --muted: #71717a;
+  --card: #f4f4f5;
+  --card-border: #e4e4e7;
+  --brand: #7c3aed; /* Slightly darker violet for light mode visibility */
+  --brand-2: #0891b2; /* Slightly darker cyan */
+}
+
+.dark {
+  /* Dark Mode Overrides */
   --background: #05060a;
   --foreground: #e7e9ee;
   --muted: #a1a7b3;
@@ -23,12 +35,7 @@
   --font-display: var(--font-ngage);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #05060a;
-    --foreground: #e7e9ee;
-  }
-}
+
 
 body {
   background: var(--background);
