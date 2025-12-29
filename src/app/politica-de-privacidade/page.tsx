@@ -114,9 +114,10 @@ export default function PrivacyPolicyPage() {
             <div className="grid gap-2">
               <h2 className="text-base font-semibold text-foreground">7. Segurança</h2>
               <p>
-                Adotamos medidas técnicas e organizacionais razoáveis para proteger dados pessoais
-                contra acesso não autorizado, perda, alteração ou divulgação indevida. Ainda assim,
-                nenhum sistema é totalmente seguro.
+                Proteção de dados pessoais é uma necessidade extrema e uma prioridade contínua.
+                Adotamos medidas técnicas e organizacionais com foco em excelência para proteger
+                dados pessoais contra acesso não autorizado, perda, alteração ou divulgação indevida.
+                Ainda assim, nenhum sistema é totalmente seguro.
               </p>
             </div>
 
@@ -150,4 +151,3 @@ export default function PrivacyPolicyPage() {
     </div>
   );
 }
-
